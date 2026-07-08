@@ -16,6 +16,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 
 
 
+
 # click show password and copy the complete connection string --before dot env file was loaded
 
 # create SQLALchemy engine 
