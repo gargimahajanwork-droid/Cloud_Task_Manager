@@ -3,12 +3,20 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from sqlalchemy.orm import declarative_base
+import os 
 
-# copy this from neo and replace the username , password and host with your own credentials 
+# copy this from neo and replace the username , password and host with your own credentials
 
-DATABASE_URL='postgresql+psycopg2://neondb_owner:npg_DNb4QE0XzxeS@ep-patient-hill-ads375zr-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
-# here we are connecting database postgresql databse hosted on the cloud (Neon)
-# click show password and copy the complete connection string 
+# ---FOR DOTENV FILE 
+from dotenv import load_dotenv
+load_dotenv()
+# import the function that can read a .env file , i .e open the new file and load all of its variables , into the memory
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+
+
+# click show password and copy the complete connection string --before dot env file was loaded
 
 # create SQLALchemy engine 
 # the engine is reponsible for connecting fastapi with the cloud Postgresql database 

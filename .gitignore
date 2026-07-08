@@ -1,0 +1,6 @@
+.env 
+# ignore this file 
+
+venv/
+# ignore the vortual environment folder if exists 
+
